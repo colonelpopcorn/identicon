@@ -1,5 +1,10 @@
 pipeline {
-  agent any
+  agent {
+    docker {
+      image 'elixir'
+    }
+    
+  }
   stages {
     stage('Build') {
       steps {
